@@ -7,13 +7,18 @@
 
 # Site settings
 title: 二巷小鞭的博客
-email: firecrackerinlane2@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  新搭的窝，会慢慢往里添置的，✌️
+  新搭的窝，会慢慢往里添置的 ✌️
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+# root
+root:
+  name: 二巷小鞭
+  email: firecrackerinlane2@gmail.com
+  github: SongRanMark
+  jianshu: a597fb28acd1
+  instagram: firecrackerinlane2

@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+    {% include head.html %}
 
   <body>
 
-    {% include header.html %}
+    <div class="intro-header">
+        <div class="wrapper-masthead">
+         <div class="container">
+           <header class="masthead clearfix">
+             <div class="site-info">
+               <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+               <p class="site-description">{{ site.description }}</p>
+             </div>
+             <nav>
+               <a href="{{ site.baseurl }}/">Blog</a>
+               <a href="{{ site.baseurl }}/about">About</a>
+             </nav>
+             <div class="fork-me-wrapper">
+                 <div class="fork-me">
+                   <a class="fork-me-link" href="https://github.com/{{ site.root.github }}">
+                   <span class="fork-me-text">Fork Me On GitHub</span>
+                   </a>
+             </div>
+           </header>
+         </div>
+       </div>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+        <div class="container">
+            <div class="space-small"></div>
+
+            <div class="centered">
+              <ul class="ch-grid">
+                <li>
+                    <div class="ch-item">
+                        <div class="ch-info-wrap">
+                            <div class="ch-info">
+                                <div class="ch-info-front ch-img-1"></div>
+                                <div class="ch-info-back">
+                                    <h3>{{site.root.name}}</h3>
+                                    <p></br><a href="http://www.jianshu.com/users/{{ site.root.jianshu }}">View on 简书</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+             <div class="space-medium"></div>
+
+        </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      {{ content }}
     </div>
 
     {% include footer.html %}
 
   </body>
-
 </html>
