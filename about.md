@@ -1,9 +1,9 @@
 ---
 layout: page
-title: About
+title: 关于
 permalink: /about/
 ---
 
-## Contact me
+## 联系我
 
 [{{ site.root.email }}](mailto:{{ site.root.email }})

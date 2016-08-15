@@ -13,7 +13,7 @@
       text-decoration: none;
     	cursor: pointer;
       &:hover{
-        color: darken($navbar-hover-color,20);
+        color: $mono-color;
       }
     }
 }
@@ -29,9 +29,9 @@
 
  .post-heading {
         a {
-         color: $hl-color;
+         color: $mono-color;
          &:hover{
-           color: darken($hl-color,20);
+           color: darken($mono-color,20);
          }
      }
  }
@@ -90,7 +90,9 @@ button.button-primary:focus {
 
 .intro-header {
   border-top: 5px solid white;
-  background-color:$mono-color;
+  // background-color:$mono-color;
+  background-image:url(#{$banner});
+  background-size:cover;
 }
 
 .intro-header .post-heading {

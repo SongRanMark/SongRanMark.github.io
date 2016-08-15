@@ -233,7 +233,7 @@ nav {
     letter-spacing: 1px;
 
     &:hover, &:active {
-      color: darken($navbar-hover-color,20);
+      color: $mono-color;
     }
 
     @include mobile {

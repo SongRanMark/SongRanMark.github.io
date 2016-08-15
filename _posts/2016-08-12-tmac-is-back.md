@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  T-mac is back
+title:  麦迪归来
 ---
 
-### Coming soon
+### 敬请期待。。。
 
 ![](http://www.enterbaystore.com/web_2014/upload_files/eshop_product/p84/gallery/1469706797_details.jpg)
