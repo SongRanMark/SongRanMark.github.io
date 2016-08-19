@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  麦迪归来
+title:  T-mac is back
 excerpt: ENTERBAY 发布 Tracy McGrady 1/6
 ---
 
