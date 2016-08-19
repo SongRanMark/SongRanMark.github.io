@@ -1,14 +1,12 @@
 ---
 layout: post
-title: [ios开发]图片资源管理
+title: ios开发-图片资源管理
+excerpt: 图片的命名规范及 Asset Catalog 的使用
 ---
-
-[iOS 及 Android 应用开发中，怎样命名和管理切图资源最科学？](https://www.zhihu.com/question/21348866)  
-[iOS 切图文件命名规范](http://www.jianshu.com/p/2896b2823b65)
 
 移动应用作为面向用户的客户端，展示内容的界面需要大量的图片资源，在 iOS 开发中，如果对图片资源有规范的命名和清晰的分类管理，可以使开发人员更方便的使用和提高开发效率。
 
-#### 图片格式
+### 图片格式
 
 ##### PNG VS JPG
 
@@ -18,7 +16,11 @@ title: [ios开发]图片资源管理
 
 如果你的项目支持 PDF 矢量图，那么就无需像位图那样管理很多适配的图片资源了，每一种图片，只需要向 Asset Catalog 导入一张矢量图即可，Xcode 会在编译时将其转化为需要的位图，如1倍图到3倍图等。
 
-#### 图片命名规范
+### 图片命名规范
+
+[iOS 及 Android 应用开发中，怎样命名和管理切图资源最科学？](https://www.zhihu.com/question/21348866)
+
+[iOS 切图文件命名规范](http://www.jianshu.com/p/2896b2823b65)
 
 最基本的原则是，文件名应该只描述图片的用途，而不描述图片的样式，所以名字中不应出现对颜色，样式等描述的单词。一种规范的格式是：
 
@@ -36,15 +38,16 @@ module_identifier_type_state
 * 命名使用英文并且全小写，不使用拼音。
 * 单词间用 _ 分隔而不是其他符号。
 
-#### 分组管理
+### 分组管理
 
 可以按照 module 来建立目录对图片
 ![Uploading ACR_Asset_Catalog_Elements_2x_772383.png . . .]
 资源进行分组管理。其实这里分目录并不与图片名以 module 开头功能重复，分目录的作用是，当项目中的图片越来越多时，可以对整个图片文件列表有清晰方便的管理。而在使用图片时，则可以通过图片名中的 module 来高效的索引和清楚的指明。·
 
-#### Asset Catalog
+### Asset Catalog
 
-[Asset Catalog Help](https://developer.apple.com/library/ios/recipes/xcode_help-image_catalog-1.0/_index.html)  
+[Asset Catalog Help](https://developer.apple.com/library/ios/recipes/xcode_help-image_catalog-1.0/_index.html)
+
 [Asset Catalog Format Reference](https://developer.apple.com/library/ios/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/index.html)
 
 Asset Catalog 是从 iOS7 开始引入的一种更方便的管理应用内资源的机制，非常适合用来管理应用内的图片资源。Asset Catalog 提供对图片和通用类型数据的管理，图片数据要求必须是 .png 格式，而对于通用类型的数据，可以是除了二进制可执行文件以外的任何类型。使用 Asset Catalog 另一个好处是，它能帮助我们实现 APP 瘦身（APP Thinning），Asset Catalog 能为不同的平台、不同设备甚至相同类型的设备但是不同的配置（比如内存大小等）提供定制化的资源供给解决方案，当用户下载应用时，只有该用户的设备需要的资源才会被下载下来，这样就减小了用户下载的包的大小。
