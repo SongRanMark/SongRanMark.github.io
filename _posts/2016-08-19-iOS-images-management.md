@@ -50,15 +50,15 @@ module_identifier_type_state
 
 Asset Catalog 是从 iOS7 开始引入的一种更方便的管理应用内资源的机制，非常适合用来管理应用内的图片资源。Asset Catalog 提供对图片和通用类型数据的管理，图片数据要求必须是 .png 格式，而对于通用类型的数据，可以是除了二进制可执行文件以外的任何类型。使用 Asset Catalog 另一个好处是，它能帮助我们实现 APP 瘦身（APP Thinning），Asset Catalog 能为不同的平台、不同设备甚至相同类型的设备但是不同的配置（比如内存大小等）提供定制化的资源供给解决方案，当用户下载应用时，只有该用户的设备需要的资源才会被下载下来，这样就减小了用户下载的包的大小。
 
-![](http://upload-images.jianshu.io/upload_images/669609-7f4b6b57b0db3c59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://oc34tply2.bkt.clouddn.com/iOS_images_management1.png)
 
 Asset Catalog 的使用非常简单，选中文件后，Xcode 提供了一个方便的操作区，左侧是所有资源项的列表，在列表底部可以新建，删资源项，当然也直接将图片拖入列表建立资源项。中间显示了该资源项内的所有适配的资源文件，右侧是资源项的属性检查器。而在编程时，使用的就是资源项的名称。
 
-![](http://upload-images.jianshu.io/upload_images/669609-fb31c2709b3156da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://oc34tply2.bkt.clouddn.com/iOS_images_management2.png)
 
 Asset Catalog 本质上就是通过目录来管理资源，其本身是一个 .  xcassets 后缀的目录，目录内包含了所有的资源项，例如可能是一个 Image Set 或 Data Set，也有可能是 App Icons 或 Launch Images，它们都是后缀为 .imageset，.launchimage 或 .appiconset 的目录。从命名(Set，Icons，Images)中也可以看出每一项都代表了一个资源集合，当然要用目录来管理。资源项目录里存放的是某一资源针对不同设备，Size Classes，内存，分辨率等而定制的不同版本的文件。.xcassets 目录内还有一种没有后缀的普通目录对应的就是 Asset Catalog 中的 Folder，用来对资源项进行分组管理。
 
-![](http://upload-images.jianshu.io/upload_images/669609-b87e3116626adda3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://oc34tply2.bkt.clouddn.com/iOS_images_management3.png)
 
 
 而要让程序可以正确找到不同版本的文件，Xcode 会自动在资源项目录里创建一个特殊的配置文件 Contents.json，在这个文件中记录了该资源的不同版本的文件对应的设备选项，以供程序可以选择正确的图片资源用于显示。文件内容类似如下形式：
@@ -133,7 +133,7 @@ launch_img_iPhone_portrait@2x
 
 使用上述命名规范并不会造成资源项名称相同的情况，但如果有名称冲突的情况，可以通过 .xcassets 内的管理资源项的分组目录提供命名空间的支持。选中该目录，就可以在属性检查器中设置
 
-![](http://upload-images.jianshu.io/upload_images/669609-ce9bb5e86fc806c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://oc34tply2.bkt.clouddn.com/iOS_images_management4.png)
 
 使用时则需要在名称前加命名空间的名字
 
@@ -145,15 +145,15 @@ UIImage *image = [UIImage imageNamed:@"Folder/payment_success_icon"];
 
 从 iOS7 开始支持 Image Slicing 功能，通过点击内容区右下角的 Show Slicing 按钮就可以开始配置了。以水平方向为例，在左线与中线之间的部分，为图片的可变的区域，用于图片缩放时的填充和压缩，而中线与右线之间的所有像素将会被隐藏。对于竖直方向，则上线对应水平方向的左线，下线对应水平方向的右线。另外，可以通过界面右侧的属性设置中的Slicing部分对其进行操作，Center包含了可变区域变化的两种模式，分别是stretch(拉伸)和tile(平铺)。
 
-![](http://upload-images.jianshu.io/upload_images/669609-ff44e45ee5ab2019.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://oc34tply2.bkt.clouddn.com/iOS_images_management5.png)
 
 ##### Render Mode
 
 UIImage 的 [renderingMode](http://www.jianshu.com/p/7c9d7605491d) 也集成到了 Asset Catalog 中了。可以在资源项的属性检查器中设置图片的渲染模式。
 
-![](http://upload-images.jianshu.io/upload_images/669609-63695fa11d097950.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://oc34tply2.bkt.clouddn.com/iOS_images_management6.png)
 
 ##### 设置图片资源为矢量图
 
 
-![](http://upload-images.jianshu.io/upload_images/669609-dec7ab3880cd2ebe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://oc34tply2.bkt.clouddn.com/iOS_images_management7.png)
