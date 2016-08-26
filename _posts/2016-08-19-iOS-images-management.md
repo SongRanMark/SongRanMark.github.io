@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ios开发-图片资源管理
+title: iOS 开发-图片资源管理
 excerpt: 图片的命名规范及 Asset Catalog 的使用
 ---
 
