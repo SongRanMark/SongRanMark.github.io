@@ -8,7 +8,7 @@
 # Site settings
 title: 二巷小鞭的博客
 description: > # this means to ignore newlines until "baseurl:"
-  新搭的窝，会慢慢往里添置的 ✌️
+  生活不止眼前的苟且，还有读不懂的诗和到不了的远方。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://firecrackerinlane2.top" # the base hostname & protocol for your site
 
